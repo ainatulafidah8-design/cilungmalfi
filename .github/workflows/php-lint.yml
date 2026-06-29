@@ -1,0 +1,27 @@
+name: PHP Lint
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  php-lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.0"
+
+      - name: Check PHP syntax
+        run: |
+          failed=0
+          for file in $(find . -name "*.php" -not -path "./vendor/*"); do
+            php -l "$file" || failed=1
+          done
+          exit $failed
