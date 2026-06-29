@@ -31,6 +31,9 @@ Aplikasi manajemen pesanan cilung (cilok + indomie) berbasis web dengan PHP & My
 - `detail_pesanan` - Item per pesanan (rasa & porsi)
 - `pemasukan` - Catatan pemasukan
 - `pengeluaran` - Catatan pengeluaran
+
+
+
 Nama : Ainatul Afidah
 NIM : 101230050
 Kelas : TF23C
